@@ -6,19 +6,14 @@ public class SimpleCalculator {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            // Input two numbers
             System.out.print("Enter first number: ");
             double num1 = scanner.nextDouble();
             System.out.print("Enter second number: ");
             double num2 = scanner.nextDouble();
 
-            // Input operator
             System.out.print("Enter an operator (+, -, *, %): ");
             char operator = scanner.next().charAt(0);
-
             double result;
-
-            // Perform operation based on the operator
             switch (operator) {
                 case '+':
                     result = num1 + num2;
@@ -53,8 +48,6 @@ public class SimpleCalculator {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
-            // Optionally, close the scanner if needed in a different context
-            // scanner.close();
         }
     }
 }
