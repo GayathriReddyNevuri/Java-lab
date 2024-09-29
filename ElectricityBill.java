@@ -1,14 +1,12 @@
 import java.util.Scanner;
 
 public class ElectricityBill {
-    // Instance variables
     String consumerNo;
     String consumerName;
     double previousReading;
     double currentReading;
     String connectionType;
 
-    // Constructor
     public ElectricityBill(String consumerNo, String consumerName, double previousReading, double currentReading, String connectionType) {
         this.consumerNo = consumerNo;
         this.consumerName = consumerName;
@@ -17,16 +15,13 @@ public class ElectricityBill {
         this.connectionType = connectionType;
     }
 
-    // Method to calculate the bill amount
     public double calculateBill(double tariff) {
         return (currentReading - previousReading) * tariff; // Calculate bill
     }
 
-    // Main method
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input details
         System.out.print("Consumer No: ");
         String consumerNo = scanner.nextLine();
         System.out.print("Consumer Name: ");
@@ -41,14 +36,9 @@ public class ElectricityBill {
         System.out.print("Tariff Rate (per unit in ₹): ");
         double tariff = scanner.nextDouble();
 
-        // Create an ElectricityBill object
         ElectricityBill bill = new ElectricityBill(consumerNo, consumerName, previousReading, currentReading, connectionType);
 
-        // Calculate and display the bill
         double billAmount = bill.calculateBill(tariff);
         System.out.printf("Electricity Bill for %s (%s): ₹%.2f%n", consumerName, connectionType, billAmount);
-
-        // Close the scanner
-        // scanner.close(); // Uncomment if you want to close the scanner
     }
 }
