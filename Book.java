@@ -1,11 +1,9 @@
 public class Book {
-    // Instance variables (package-private by default)
-    String bookName;   // Name of the book
-    String isbnNumber; // ISBN number of the book
-    String authorName; // Author of the book
-    String publisher;   // Publisher of the book
+    String bookName;
+    String isbnNumber;
+    String authorName;
+    String publisher;
 
-    // Constructor to initialize the instance variables
     public Book(String bookName, String isbnNumber, String authorName, String publisher) {
         this.bookName = bookName;
         this.isbnNumber = isbnNumber;
@@ -13,7 +11,6 @@ public class Book {
         this.publisher = publisher;
     }
 
-    // Set methods
     public void setBookName(String bookName) {
         this.bookName = bookName;
     }
@@ -30,7 +27,6 @@ public class Book {
         this.publisher = publisher;
     }
 
-    // Get methods
     public String getBookName() {
         return bookName;
     }
@@ -47,7 +43,6 @@ public class Book {
         return publisher;
     }
 
-    // Method to get book information
     public String getBookInfo() {
         return "Book Name: " + bookName + "\n" +
                "ISBN Number: " + isbnNumber + "\n" +
@@ -55,16 +50,10 @@ public class Book {
                "Publisher: " + publisher;
     }
 
-    // Main method to demonstrate the functionality
     public static void main(String[] args) {
-        // Create a Book object
-        Book book1 = new Book("Effective Java", "978-0134686097", "Joshua Bloch", "Addison-Wesley");
-
-        // Display book information
+        Book book1 = new Book("Java", "978", "Bloch", "Wesley");
         System.out.println(book1.getBookInfo());
-
-        // Modify and display updated information
-        book1.setBookName("Effective Java (2nd Edition)");
+        book1.setBookName("Java (2nd Edition)");
         System.out.println("\nUpdated Book Information:");
         System.out.println(book1.getBookInfo());
     }
