@@ -6,17 +6,14 @@ public class IntegerDivision {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            // Input two numbers
             System.out.print("Enter first number (Num1): ");
             String input1 = scanner.nextLine();
             System.out.print("Enter second number (Num2): ");
             String input2 = scanner.nextLine();
 
-            // Parse inputs to integers
             int num1 = Integer.parseInt(input1);
             int num2 = Integer.parseInt(input2);
 
-            // Perform division
             int result = num1 / num2;
             System.out.println("Result of division: " + result);
 
@@ -27,8 +24,6 @@ public class IntegerDivision {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
-            // Optionally, close the scanner if needed in a different context
-            // scanner.close();
         }
     }
 }
